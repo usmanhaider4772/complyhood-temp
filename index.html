@@ -4,64 +4,235 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Complyhood - Stay Tuned</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;500&display=swap">
   <style>
-    body {
+    * {
       margin: 0;
-      height: 100vh;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #fff;
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      font-family: 'Open Sans', sans-serif;
+      color: #2d3436;
       text-align: center;
+      padding: 30px 20px;
+      line-height: 1.6;
     }
+    
     .container {
-      animation: fadeIn 2s ease-in-out;
+      max-width: 800px;
+      width: 100%;
+      animation: fadeIn 1.2s ease-out;
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.2rem;
+    
+    .logo {
       margin-bottom: 40px;
-      opacity: 0.9;
     }
-    .social-links {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
+    
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3.8rem;
+      margin-bottom: 15px;
+      letter-spacing: -1.5px;
+      font-weight: 700;
+      color: #2d3436;
     }
-    .social-links a {
-      color: #fff;
-      font-size: 1.5rem;
-      text-decoration: none;
-      transition: color 0.3s ease;
+    
+    .comply {
+      color: #0984e3;
     }
-    .social-links a:hover {
-      color: #ffd700;
+    
+    .hood {
+      color: #2d3436;
     }
+    
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 50px;
+      opacity: 0.85;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    
+    .rocket {
+      display: inline-block;
+      animation: float 3s ease-in-out infinite;
+      margin-left: 8px;
+    }
+    
+    .social-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.social-title {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  opacity: 0.8;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon img {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover img {
+  filter: none; /* Show original color on hover */
+}
+
+/* Individual icon colors on hover */
+.social-icon.linkedin:hover img { filter: none; }
+.social-icon.twitter:hover img { filter: none; }
+.social-icon.instagram:hover img { filter: none; }
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .social-icons { gap: 15px; }
+  .social-icon { width: 40px; height: 40px; }
+  .social-icon img { width: 20px; height: 20px; }
+}
+    
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
+      
+      p {
+        font-size: 1.2rem;
+      }
+      
+      .social-link {
+        padding: 16px 20px;
+        font-size: 1.1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+      }
+      
+      .social-title {
+        font-size: 1rem;
+      }
+      
+      .social-link {
+        padding: 14px 18px;
+        font-size: 1rem;
+      }
+    }
+    
+    .footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
   </style>
-  <!-- Font Awesome for Social Icons -->
-  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
-<h1><strong>Comply</strong>hood</h1>
-    <p>Stay Tuned 🚀 — Something exciting is coming soon!</p>
-    <div class="social-links">
-      <a href="https://linkedin.com/company/complyhood" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://twitter.com/complyhood" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://instagram.com/complyhood" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:info@complyhood.com"><i class="fas fa-envelope"></i></a>
+    <div class="logo">
+      <h1><span class="comply">Comply</span><span class="hood">hood</span></h1>
+    </div>
+    
+    <p>Stay Tuned <span class="rocket">🚀</span> — Something exciting is coming soon!</p>
+    
+<div class="social-section">
+  <div class="social-title">Connect With Us</div>
+  <div class="social-icons">
+    <a href="https://linkedin.com/company/complyhood" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" />
+    </a>
+    <a href="https://twitter.com/complyhood" target="_blank" class="social-icon twitter" aria-label="Twitter">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" />
+    </a>
+    <a href="https://instagram.com/complyhood" target="_blank" class="social-icon instagram" aria-label="Instagram">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />
+    </a>
+  </div>
+</div>
+    
+
+  <br/>
+  <br/>
+  
+    <div class="footer">
+      © 2025 Complyhood. All rights reserved.
     </div>
   </div>
+
+  <script>
+    // Simple JavaScript to enhance the page
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add click event listeners to social links
+      const socialLinks = document.querySelectorAll('.social-link');
+      
+      socialLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          this.style.transform = 'scale(0.98)';
+          setTimeout(() => {
+            this.style.transform = '';
+          }, 200);
+        });
+      });
+      
+      // Animate the rocket
+      const rocket = document.querySelector('.rocket');
+      let scale = 1;
+      setInterval(() => {
+        scale = scale === 1 ? 1.1 : 1;
+        rocket.style.transform = `translateY(-8px) scale(${scale})`;
+      }, 1500);
+    });
+  </script>
 </body>
 </html>
-
